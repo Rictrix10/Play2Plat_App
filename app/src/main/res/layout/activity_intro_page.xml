@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_border">
+
+    <!-- RelativeLayout containing the logo -->
+    <RelativeLayout
+        android:id="@+id/ll_main_layout_add_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageLogoView"
+            android:layout_width="match_parent"
+            android:layout_height="234dp"
+            app:srcCompat="@drawable/logo_play2plat" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="329dp"
+            android:layout_height="145dp"
+            android:layout_below="@id/imageLogoView"
+            android:layout_marginTop="-1dp"
+            android:fontFamily="@font/m_plus_rounded_1c_medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageIntroView"
+            android:layout_width="match_parent"
+            android:layout_height="231dp"
+            android:layout_below="@id/tv_description"
+            android:layout_marginTop="17dp"
+            app:srcCompat="@drawable/image_intro" />
+    </RelativeLayout>
+
+    <!-- Button at the bottom right -->
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="218dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/details"
+        android:text="@string/btn_get_started_text"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

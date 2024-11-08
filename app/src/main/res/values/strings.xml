@@ -1,0 +1,281 @@
+<resources>
+    <string name="app_name">Play2Plat</string>
+    <string name="title_activity_main_page">Main_Page</string>
+    <string name="tv_description_text">Explore your electronic gaming adventures like never before with play2plat - the ultimate app to record, share, and connect with fellow passionate gamers.</string>
+    <string name="btn_get_started_text">Get Started</string>
+    <string-array name="pegi_info_values">
+        <item>3</item>
+        <item>7</item>
+        <item>12</item>
+        <item>16</item>
+        <item>18</item>
+    </string-array>
+    <string-array name="collections_names">
+        <item>Wish List</item>
+        <item>Playing</item>
+        <item>Paused</item>
+        <item>Concluded</item>
+    </string-array>
+
+    <string name="PostsLabel">Posts:</string>
+    <string name="VerMapa">See Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up_prompt">New Here? <font color="#D10341">Sign Up</font></string>
+    <string name="sign_in_prompt">Have an account? <font color="#D10341">Sign In</font></string>
+    <string name="playing">Playing</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Pass</string>
+    <string name="no_connection_login">Login error, check your connection</string>
+    <string name="no_connection_register">Register error, check your connection</string>
+
+
+    <string name="upload_cover">Upload Cover</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="enter_game_title">Enter Game Title</string>
+    <string name="genres">Genres</string>
+    <string name="platforms">Platforms</string>
+    <string name="companies">Companies</string>
+    <string name="sequencess">Sequences</string>
+    <string name="pegi_information">Pegi Information</string>
+    <string name="free">Free</string>
+    <string name="save">Save</string>
+
+    <string name="view_games">View games</string>
+    <string name="favorites">Favorites</string>
+    <string name="games">Games</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="no_favorite_games">Looks like you still dont have any favorited games</string>
+    <string name="no_collection_games">Looks like you still dont have any games in collection %1$s</string>
+    <string name="no_playing_games_user">You don\'t have any games in collection Playing</string>
+    <string name="no_favorite_games_user">You don\'t have any favorited games</string>
+    <string name="no_playing_games_other">This user doesn\'t have any games in collection Playing</string>
+    <string name="no_favorite_games_other">This user doesn\'t have any favorited games</string>
+    <string name="more_games_future">More games in the future</string>
+    <string name="paramaters_games">%1$s Games</string>
+    <string name="paramaters_games2">%1$s Games</string>
+
+    <string name="action_games">Action Games:</string>
+    <string name="free_games">Free Games:</string>
+    <string name="mobile_games">Mobile Games:</string>
+
+    <string name="hello">Hello,</string>
+
+    <string name="description">Description:</string>
+    <string name="rate_this_game">Rate this Game:</string>
+    <string name="posts">Posts:</string>
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="new_pass">New Password</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="change_pass">Change Password</string>
+
+    <string name="new_post">Write your new Post</string>
+
+    <string name="collections">Collections</string>
+    <string name="platforms2">Platforms:</string>
+
+    <string name="bad">bad</string>
+    <string name="ok">ok</string>
+    <string name="good">good</string>
+    <string name="great">great</string>
+    <string name="wow">wow</string>
+
+
+    <string name="email_invalid">Invalid email address</string>
+    <string name="password_invalid">Pass must be 8+ chars, with uppercase, number, and special character</string>
+    <string name="email_in_use">Email is already in use</string>
+    <string name="username_in_use">Username is already in use</string>
+    <string name="registration_failed">Registration failed</string>
+    <string name="password_mismatch">Passwords do not match</string>
+    <string name="user_registered_successfully">User registered successfully</string>
+
+
+    <string name="user_not_found">User does not exist</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="login_failed">Login failed</string>
+    <string name="login_successful">Login successful</string>
+    <string name="please_fill_all_fields">Please fill in all fields</string>
+    <string name="error_response_from_server">Invalid response from server</string>
+    <string name="no_games_found">No Games found</string>
+    <string name="from">From</string>
+    <string name="recent_games">Recent Games</string>
+    <string name="favourite_games">Favorite Games</string>
+    <string name="playing_games">Playing Games</string>
+    <string name="founded_games">Founded Games</string>
+    <string name="error_upload_image">Error uploading image, choose another</string>
+    <string name="email_not_null">Email can\'t be empty</string>
+    <string name="username_not_null">Username can\'t be empty</string>
+    <string name="unknown_error">Unknown error</string>
+
+    <string name="delete_account">Do you really want to delete the account?</string>
+    <string name="digite_pass">Enter your password</string>
+    <string name="account_deleted">Account successfully deleted</string>
+
+    <string name="remember_me">Remember Me</string>
+    <string name="customize">Appearence</string>
+
+    <string name="app_theme">Theme:</string>
+    <string name="app_language">Language:</string>
+
+
+    <string name="confirm_title">Confirmation</string>
+    <string name="confirm_message">Do you really want to log out?</string>
+    <string name="confirm_yes">Yes</string>
+    <string name="confirm_no">No</string>
+    <string name="error_delete_account">Error deleting account, check your connection</string>
+    <string name="deleted_user">Deleted user</string>
+    <string name="replying">Replying to </string>
+
+
+
+    <string name="confirm_delete_message">Are you sure you want to delete your account?</string>
+    <string name="password_incorrect">Incorrect password</string>
+    <string name="password_empty">Password cannot be empty</string>
+
+    <string name="your_collections_title">Your Collections:</string>
+
+    <string name="search_games_title">Search Games</string>
+
+    <string name="light_mode">Light</string>
+    <string name="dark_mode">Dark</string>
+    <string name="system_default_mode">Auto</string>
+
+    <string name="english_language">English</string>
+    <string name="portuguese_language">Portuguese</string>
+    <string name="system_default_language">Auto</string>
+
+
+    <string name="reset">Reset</string>
+    <string name="filters">Filters</string>
+    <string name="order_type">Order Type:</string>
+    <string name="free_game">Free Games:</string>
+    <string name="only_free_games">Only Free Games</string>
+    <string name="order_preference">Order Preference:</string>
+    <string name="submit_filter">Submit Filter</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+    <string name="name">Name</string>
+    <string name="recent">Recent</string>
+    <string name="rating">Rating</string>
+
+
+
+    <string name="logout">Logout</string>
+    <string name="delete_accountt">Delete Account</string>
+
+
+
+    <string name="game_rating">Game Rating:</string>
+    <string name="platformss">Platforms:</string>
+
+
+        <string name="no_internet_message">No internet connection.\nCheck your connection or try again later</string>
+    <string name="edit_game">Edit Game</string>
+
+
+    <string name="click_marker_to_see_comment">Click on a marker to see the comment</string>
+
+    <string name="profile_updated_successfully">Profile edited successfully!</string>
+
+    <string name="game_name_empty">Please enter a game name.</string>
+    <string name="description_too_short">The description must be longer than 6 characters.</string>
+    <string name="genre_empty">Please select at least one genre.</string>
+    <string name="platform_empty">Please select at least one platform.</string>
+    <string name="company_empty">Please select a company.</string>
+    <string name="pegi_info_empty">Please select PEGI information.</string>
+    <string name="image_empty">Please select an image.</string>
+    <string name="activity_state_saved">Activity state has already been saved. Please try again.</string>
+
+    <string name="username_empty">Username cannot be empty</string>
+    <string name="email_empty">Email cannot be empty</string>
+
+    <string name="filters_reset_success">Filters reset successfully</string>
+
+    <string name="selected_platforms">Selected platforms: %s</string>
+
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="comment_post_error">Error posting comment, please check your internet connection</string>
+    <string name="delete_comment_error">Error deleting comment, please check your internet connection</string>
+    <string name="comment_empty_error">Comment cannot be empty</string>
+    <string name="comment_post_success">Comment posted successfully!</string>
+    <string name="error_posting_comment">Error posting comment</string>
+    <string name="comment_update_success">Comment edited successfully!</string>
+    <string name="error_update_comment">Error edited comment</string>
+    <string name="edit_comment_error">Error editing comment, please check your internet connection</string>
+    <string name="error_get_comment_details">Error retrieving comment details</string>
+    <string name="request_comment_details_failure">Request failed to get comment details</string>
+    <string name="comment_delete_success">Comment deleted successfully</string>
+    <string name="delete_comment_failure">Failed to delete comment</string>
+
+    <string name="insert_three_characters">Please enter at least three characters.</string>
+
+    <string name="rate_error_internet">Error rating, please check your internet connection</string>
+    <string name="remove_rating_success">Rating removed successfully</string>
+    <string name="add_rating_success">Rating added successfully</string>
+    <string name="update_rating_success">Rating edited successfully</string>
+
+    <string name="user_id_null">User ID is null</string>
+    <string name="platform_added">Platform added</string>
+    <string name="failed_to_add_platform">Failed to add platform</string>
+    <string name="platform_removed">Platform removed</string>
+    <string name="failed_to_remove_platform">Failed to remove platform</string>
+
+    <string name="account_deleted_success">Account deleted successfully</string>
+    <string name="failed_to_delete_account">Failed to delete account</string>
+
+    <string name="invalid_username">Invalid username</string>
+
+    <string name="image_shorter">Insert a smaller image</string>
+    <string name="need_online_edit_game">You need to be online to edit a game</string>
+    <string name="error_favoriting">Error favoriting, please check your internet connection</string>
+    <string name="need_online_delete_account">You need to be online to delete your account</string>
+    <string name="need_online_delete_game">You need to be online to delete a game</string>
+    <string name="need_online_edit_platforms">You need to be online to edit platforms</string>
+    <string name="error_add_game">Error adding game, please check your internet connection</string>
+    <string name="error_edit_game">Error editing game, please check your internet connection</string>
+    <string name="error_delete_game">Error deleting game, please check your internet connection</string>
+    <string name="cancel">Cancel</string>
+    <string name="type_fatality">Type \'Fatality\' to confirm</string>
+    <string name="game_deleted_success">Game deleted successfully</string>
+    <string name="edit_game_fail">Error editing game</string>
+    <string name="delete_game_fail">Error deleting game</string>
+    <string name="game_edited_success">Game edited successfully</string>
+    <string name="game_added_success">Game added successfully</string>
+    <string name="no_net_collections">You need to be online to change collection</string>
+
+    <string name="edit">Edit</string>
+    <string name="apagar">Delete</string>
+    <string name="editing">Editing</string>
+    <string name="type_here">Type here</string>
+    <string name="type_fatality_confirm">Type \'Fatality\' to confirm deletion</string>
+    <string name="about">About</string>
+    <string name="interact">Interact</string>
+
+    <string name="delete_comment">Do you really want to delete this comment?</string>
+    <string name="confirm">Confirmation</string>
+
+    <string name="no_posts_on_game">No one has posted on the game yet. Be the first, share your experience</string>
+    <string name="see_more_posts">See more posts</string>
+
+    <string name="switch_theme">Switch Theme</string>
+
+    <string name="laguage">Defined Language:English</string>
+    <string name="passwords_not_empty">Password fields must not be empty.</string>
+    <string name="passwords_do_not_match">The passwords don´t match </string>
+
+    <string name="forget_password_info">Please enter the email associated with your account to receive a new temporary password.</string>
+    <string name="submit_forget_password">Send</string>
+    <string name="enter_email_warning">Please enter your email.</string>
+    <string name="forget_password_request_submitted">Password recovery request sent successfully.</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="email_send_failure">Failed to send password recovery email. Please try again later.</string>
+
+
+
+</resources>
