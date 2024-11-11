@@ -7,6 +7,7 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.Multipart
 import retrofit2.http.PATCH
 import retrofit2.http.POST
@@ -60,7 +61,17 @@ interface ApiService {
     fun createUser(@Body user: UserRegister): Call<UserRegisterResponse>
 
     @POST("users/login")
-    fun loginUser(@Body userLogin: UserLogin): Call<UserLoginResponse>
+    fun loginUser(@Header("x-api-key") apiKey: String, @Body userLogin: UserLogin): Call<UserLoginResponse>
+
+    // Endpoint de refresh do token
+    @POST("users/refresh-token")
+    fun refreshToken(@Body refreshTokenBody: RefreshTokenBody): Call<RefreshTokenResponse>
+    @POST("some/protected/endpoint")
+    fun someProtectedEndpoint(
+        @Header("Authorization") token: String,
+        @Header("x-api-key") apiKey: String,
+        @Body requestBody: UserLogin
+    ): Call<UserLoginResponse>
 
     @GET("users/{id}")
     fun getUserById(@Path("id") id: Int): Call<User>

@@ -69,6 +69,14 @@ class LoginPage : AppCompatActivity() {
             insets
         }
 
+        val sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+        val token = sharedPreferences.getString("jwt_token", null)
+
+        // Se o token existir, configure-o no ApiManager
+        if (token != null) {
+            ApiManager.setJwtToken(token)
+        }
+
         etPassword = findViewById(R.id.et_password)
         ivTogglePasswordVisibility = findViewById(R.id.iv_toggle_password_visibility)
 
@@ -125,7 +133,8 @@ class LoginPage : AppCompatActivity() {
     private fun loginUser() {
         val username = findViewById<EditText>(R.id.et_username).text.toString()
         val password = etPassword.text.toString()
-        Log.d("Login", "${username}, ${password}")
+        Log.d("Login", "$username, $password")
+
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, R.string.please_fill_all_fields, Toast.LENGTH_SHORT).show()
             return
@@ -137,12 +146,28 @@ class LoginPage : AppCompatActivity() {
         }
 
         val userLogin = UserLogin(username, password)
-        ApiManager.apiService.loginUser(userLogin).enqueue(object : Callback<UserLoginResponse> {
+        val API_KEY = "a75cfc9e4102e2830343787f2e0f3b939f877b8d7b1f2c1a9fdd07d0d3e0542c5beed6c0e5b80eb7cd8b57ab8cbcb9dbb3b4f8b06ad86ad4fe2b7b302d907d7e"
+        ApiManager.apiService.loginUser(API_KEY, userLogin).enqueue(object : Callback<UserLoginResponse> {
             override fun onResponse(call: Call<UserLoginResponse>, response: Response<UserLoginResponse>) {
                 if (response.isSuccessful) {
                     val userLoginResponse = response.body()
                     if (userLoginResponse != null) {
                         val user = userLoginResponse.user
+                        val acessToken = userLoginResponse.accessToken // Pega o token JWT
+                        val refreshToken = userLoginResponse.refreshToken
+
+                        // Salva o token JWT no SharedPreferences
+                        val sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                        with(sharedPreferences.edit()) {
+                            putString("jwt_token", acessToken)  // Salva o token JWT
+                            putString("refresh_token", refreshToken)
+                            apply()
+                        }
+
+                        // Configura o token JWT no ApiManager
+                        ApiManager.setJwtToken(acessToken)
+                        ApiManager.setRefreshToken(refreshToken)
+
                         saveUserData(user)
                         if (user.avatar != null) {
                             saveAvatarImage(user.avatar!!) { imagePath ->
@@ -151,6 +176,7 @@ class LoginPage : AppCompatActivity() {
                         } else {
                             checkAndSaveUserToRoom(user, null)
                         }
+
                         // Marcar usuário como logado
                         setUserLoggedIn()
                     } else {
@@ -171,6 +197,9 @@ class LoginPage : AppCompatActivity() {
             }
         })
     }
+
+
+
 
     private fun saveUserData(user: User1) {
         val sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
