@@ -87,18 +87,39 @@
                 android:focusable="true" />
 
 
-            <Button
-                android:id="@+id/btn_sign_in"
+            <FrameLayout
+                android:id="@+id/layout_sign_in"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="45dp"
-                android:background="@drawable/details"
-                android:text="@string/sign_in"
-                android:fontFamily="@font/m_plus_rounded_1c_black"
-                android:textSize="30sp"
-                android:textColor="#FFFFFF"
-                android:textAllCaps="false" />
+                android:background="@drawable/details">
+
+                <!-- TextView para o texto de login -->
+                <TextView
+                    android:id="@+id/tv_sign_in_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/sign_in"
+                    android:fontFamily="@font/m_plus_rounded_1c_black"
+                    android:textSize="30sp"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false" />
+
+                <!-- ProgressBar para o estado de carregamento -->
+                <ProgressBar
+                    android:id="@+id/progress_loader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@android:color/white"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+
 
             <View
                 android:layout_width="match_parent"

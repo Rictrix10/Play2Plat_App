@@ -67,7 +67,9 @@ class Edit_Game_Fragment : Fragment() {
     private lateinit var gameTitleEditText: EditText
     private lateinit var descriptionEditText: EditText
     private lateinit var pegiInfoSpinner: Spinner
-    private lateinit var saveButton: Button
+    private lateinit var progressLoader: ProgressBar
+    private lateinit var layoutSave: FrameLayout
+    private lateinit var tvSaveText: TextView
     private lateinit var imageView: ImageView
     private lateinit var isFreeCheckBox: CheckBox
     private lateinit var companyAdapter: CompanyAdapter
@@ -114,7 +116,9 @@ class Edit_Game_Fragment : Fragment() {
 
         gameTitleEditText = view.findViewById(R.id.game_title)
         descriptionEditText = view.findViewById(R.id.description)
-        saveButton = view.findViewById(R.id.save)
+        layoutSave = view.findViewById(R.id.layout_save)
+        tvSaveText = view.findViewById(R.id.tv_save_text)
+        progressLoader = view.findViewById(R.id.progress_loader)
         isFreeCheckBox = view.findViewById(R.id.is_free_checkbox)
         backButton = view.findViewById(R.id.back_icon)
 
@@ -176,8 +180,11 @@ class Edit_Game_Fragment : Fragment() {
 
 
 
-        saveButton.setOnClickListener {
+        layoutSave.setOnClickListener {
             if (isNetworkAvailable()) {
+                tvSaveText.visibility = View.GONE
+                progressLoader.visibility = View.VISIBLE
+
                 val gameTitle = gameTitleEditText.text.toString()
                 val description = descriptionEditText.text.toString()
                 val selectedCompanyText = companyTitle.text.toString()
@@ -219,6 +226,7 @@ class Edit_Game_Fragment : Fragment() {
                         getString(R.string.game_name_empty),
                         Toast.LENGTH_SHORT
                     ).show()
+                    resetSaveLayout()
                     return@setOnClickListener
                 }
 
@@ -228,6 +236,7 @@ class Edit_Game_Fragment : Fragment() {
                         getString(R.string.description_too_short),
                         Toast.LENGTH_SHORT
                     ).show()
+                    resetSaveLayout()
                     return@setOnClickListener
                 }
 
@@ -237,6 +246,7 @@ class Edit_Game_Fragment : Fragment() {
                         getString(R.string.genre_empty),
                         Toast.LENGTH_SHORT
                     ).show()
+                    resetSaveLayout()
                     return@setOnClickListener
                 }
 
@@ -246,6 +256,7 @@ class Edit_Game_Fragment : Fragment() {
                         getString(R.string.company_empty),
                         Toast.LENGTH_SHORT
                     ).show()
+                    resetSaveLayout()
                     return@setOnClickListener
                 }
 
@@ -256,6 +267,7 @@ class Edit_Game_Fragment : Fragment() {
                         getString(R.string.pegi_info_empty),
                         Toast.LENGTH_SHORT
                     ).show()
+                    resetSaveLayout()
                     return@setOnClickListener
                 }
 
@@ -319,6 +331,7 @@ class Edit_Game_Fragment : Fragment() {
                                     getString(R.string.error_upload_image),
                                     Toast.LENGTH_SHORT
                                 ).show()
+                                resetSaveLayout()
                             }
                         }
 
@@ -328,6 +341,7 @@ class Edit_Game_Fragment : Fragment() {
                                 getString(R.string.error_upload_image),
                                 Toast.LENGTH_SHORT
                             ).show()
+                            resetSaveLayout()
                         }
                     })
                 }
@@ -338,6 +352,7 @@ class Edit_Game_Fragment : Fragment() {
                     getString(R.string.error_edit_game),
                     Toast.LENGTH_SHORT
                 ).show()
+                resetSaveLayout()
             }
 
         }
@@ -397,6 +412,7 @@ class Edit_Game_Fragment : Fragment() {
                                                                         getString(R.string.game_edited_success),
                                                                         Toast.LENGTH_SHORT
                                                                     ).show()
+                                                                    resetSaveLayout()
                                                                     navigateBack()
                                                                 }
                                                             } else {
@@ -432,6 +448,11 @@ class Edit_Game_Fragment : Fragment() {
             })
     }
 
+    private fun resetSaveLayout() {
+        tvSaveText.visibility = View.VISIBLE
+        progressLoader.visibility = View.GONE
+    }
+
 
 
     private fun navigateBack() {
@@ -464,6 +485,7 @@ class Edit_Game_Fragment : Fragment() {
             }
         } else {
             Toast.makeText(requireContext(), getString(R.string.activity_state_saved), Toast.LENGTH_SHORT).show()
+            resetSaveLayout()
         }
     }
 

@@ -13,9 +13,12 @@ import android.os.Environment
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -49,6 +52,10 @@ class LoginPage : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var ivTogglePasswordVisibility: ImageView
     private var isPasswordVisible: Boolean = false
+    private lateinit var progressLoader: ProgressBar
+    private lateinit var layoutSignIn: FrameLayout
+    private lateinit var tvSignInText: TextView
+
 
     private val userViewModel: UserViewModel by viewModels()
 
@@ -84,8 +91,15 @@ class LoginPage : AppCompatActivity() {
             togglePasswordVisibility()
         }
 
-        val btnSignIn: Button = findViewById(R.id.btn_sign_in)
-        btnSignIn.setOnClickListener {
+        layoutSignIn = findViewById(R.id.layout_sign_in)
+        tvSignInText = findViewById(R.id.tv_sign_in_text)
+        progressLoader = findViewById(R.id.progress_loader)
+
+        layoutSignIn.setOnClickListener {
+            // Mostrar o ProgressBar e ocultar o TextView quando o processo de login inicia
+            tvSignInText.visibility = View.GONE
+            progressLoader.visibility = View.VISIBLE
+
             loginUser()
         }
 
@@ -118,6 +132,11 @@ class LoginPage : AppCompatActivity() {
         checkIfUserIsLoggedIn()
     }
 
+    private fun resetSignInLayout() {
+        tvSignInText.visibility = View.VISIBLE
+        progressLoader.visibility = View.GONE
+    }
+
     private fun togglePasswordVisibility() {
         if (isPasswordVisible) {
             etPassword.transformationMethod = PasswordTransformationMethod.getInstance()
@@ -133,38 +152,42 @@ class LoginPage : AppCompatActivity() {
     private fun loginUser() {
         val username = findViewById<EditText>(R.id.et_username).text.toString()
         val password = etPassword.text.toString()
-        Log.d("Login", "$username, $password")
 
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, R.string.please_fill_all_fields, Toast.LENGTH_SHORT).show()
+            resetSignInLayout()
             return
         }
 
         if (!isNetworkAvailable()) {
             Toast.makeText(this, R.string.no_connection_login, Toast.LENGTH_SHORT).show()
+            resetSignInLayout()
             return
         }
+
+        // Ocultar texto e mostrar o spinner
 
         val userLogin = UserLogin(username, password)
         val API_KEY = "a75cfc9e4102e2830343787f2e0f3b939f877b8d7b1f2c1a9fdd07d0d3e0542c5beed6c0e5b80eb7cd8b57ab8cbcb9dbb3b4f8b06ad86ad4fe2b7b302d907d7e"
         ApiManager.apiService.loginUser(API_KEY, userLogin).enqueue(object : Callback<UserLoginResponse> {
             override fun onResponse(call: Call<UserLoginResponse>, response: Response<UserLoginResponse>) {
+                // Reverter o estado do botão após a resposta
+
+
                 if (response.isSuccessful) {
                     val userLoginResponse = response.body()
                     if (userLoginResponse != null) {
                         val user = userLoginResponse.user
-                        val acessToken = userLoginResponse.accessToken // Pega o token JWT
+                        val acessToken = userLoginResponse.accessToken
                         val refreshToken = userLoginResponse.refreshToken
 
-                        // Salva o token JWT no SharedPreferences
                         val sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
                         with(sharedPreferences.edit()) {
-                            putString("jwt_token", acessToken)  // Salva o token JWT
+                            putString("jwt_token", acessToken)
                             putString("refresh_token", refreshToken)
                             apply()
                         }
 
-                        // Configura o token JWT no ApiManager
                         ApiManager.setJwtToken(acessToken)
                         ApiManager.setRefreshToken(refreshToken)
 
@@ -177,10 +200,11 @@ class LoginPage : AppCompatActivity() {
                             checkAndSaveUserToRoom(user, null)
                         }
 
-                        // Marcar usuário como logado
+                        resetSignInLayout()
                         setUserLoggedIn()
                     } else {
                         Toast.makeText(this@LoginPage, R.string.error_response_from_server, Toast.LENGTH_SHORT).show()
+                        resetSignInLayout()
                     }
                 } else {
                     val errorMessage = when (response.code()) {
@@ -189,16 +213,17 @@ class LoginPage : AppCompatActivity() {
                         else -> getString(R.string.login_failed)
                     }
                     Toast.makeText(this@LoginPage, errorMessage, Toast.LENGTH_SHORT).show()
+                    resetSignInLayout()
                 }
             }
 
             override fun onFailure(call: Call<UserLoginResponse>, t: Throwable) {
+                // Reverter o estado do botão se a chamada falhar
                 Toast.makeText(this@LoginPage, R.string.login_failed, Toast.LENGTH_SHORT).show()
+                resetSignInLayout()
             }
         })
     }
-
-
 
 
     private fun saveUserData(user: User1) {

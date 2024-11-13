@@ -23,6 +23,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -62,6 +63,7 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
     private lateinit var commentEditTextView: EditText
     private lateinit var imageImageView: ImageView
     private lateinit var sendImageView: ImageView
+    private lateinit var progressLoader: ProgressBar
     private lateinit var seeMapButton: LinearLayout
     private lateinit var iconCrossView: ImageView
     private lateinit var editButton: Button
@@ -134,6 +136,7 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
         commentEditTextView = view.findViewById(R.id.comment)
         imageImageView = view.findViewById(R.id.image_icon)
         sendImageView = view.findViewById(R.id.send_icon)
+        progressLoader = view.findViewById(R.id.progress_loader)
         container_layout = view.findViewById(R.id.container)
         more_options_layout = view.findViewById(R.id.more_options_layout)
         ReplyingTo = view.findViewById(R.id.replying_to_text)
@@ -204,6 +207,8 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
 
 
         sendImageView.setOnClickListener {
+            sendImageView.visibility = View.GONE
+            progressLoader.visibility = View.VISIBLE
             if (isNetworkAvailable()) {
                 getLocationAndPostComment(userId, gameId)
             }
@@ -213,6 +218,7 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                     getString(R.string.comment_post_error),
                     Toast.LENGTH_SHORT
                 ).show()
+                SendLoading()
             }
         }
 
@@ -238,6 +244,11 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
         }
 
         return view
+    }
+
+    private fun SendLoading() {
+        sendImageView.visibility = View.VISIBLE
+        progressLoader.visibility = View.GONE
     }
 
 
@@ -363,6 +374,7 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                                                 val coverImageUrl = result.groupValues[1]
                                                 postComment(comments, coverImageUrl, userId, gameId, latitude, longitude, locationInfo)
                                             }
+                                            SendLoading()
                                         }
                                     } else {
                                         val errorBody = response.errorBody()?.string() ?: "Unknown error"
@@ -372,11 +384,13 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                                             getString(R.string.error_upload_image),
                                             Toast.LENGTH_SHORT
                                         ).show()
+                                        SendLoading()
                                     }
                                 }
 
                                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                                     Log.e("AddNewComment", "Erro na requisição: ${t.message}")
+                                    SendLoading()
                                 }
                             })
                         } else {
@@ -426,6 +440,7 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                                                 patchComment(comments, coverImageUrl, userId, gameId, latitude, longitude, locationInfo)
                                             }
                                         }
+                                        SendLoading()
                                     } else {
                                         val errorBody = response.errorBody()?.string() ?: "Unknown error"
                                         Log.e("AddNewComment", "Erro no upload: $errorBody")
@@ -434,11 +449,13 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                                             getString(R.string.error_upload_image),
                                             Toast.LENGTH_SHORT
                                         ).show()
+                                        SendLoading()
                                     }
                                 }
 
                                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                                     Log.e("AddNewComment", "Erro na requisição: ${t.message}")
+                                    SendLoading()
                                 }
                             })
                         } else {
@@ -477,17 +494,20 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                                 postComment(comments, coverImageUrl, userId, gameId, null, null, LocationInfo(null, null, null, null, null, null))
                             }
                         }
+                        SendLoading()
                     } else {
                         Toast.makeText(
                             requireContext(),
                             getString(R.string.error_upload_image),
                             Toast.LENGTH_SHORT
                         ).show()
+                        SendLoading()
                     }
                 }
 
                 override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                     Log.e("AddNewComment", "Erro na requisição: ${t.message}")
+                    SendLoading()
                 }
             })
         } else {
@@ -555,7 +575,7 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                 getString(R.string.comment_empty_error),
                 Toast.LENGTH_SHORT
             ).show()
-
+            SendLoading()
             return
         }
 
@@ -569,6 +589,7 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                             getString(R.string.comment_post_success),
                             Toast.LENGTH_SHORT
                         ).show()
+                        SendLoading()
 
                         more_options_layout.visibility = View.GONE
                         commentEditTextView.text.clear()
@@ -586,12 +607,14 @@ class GamePostsFragment : Fragment(), GamePostsAdapter.OnProfilePictureClickList
                             getString(R.string.error_posting_comment),
                             Toast.LENGTH_SHORT
                         ).show()
+                        SendLoading()
 
                     }
                 }
 
                 override fun onFailure(call: Call<Comment>, t: Throwable) {
                     Log.e("AddNewComment", "Erro na requisição: ${t.message}")
+                    SendLoading()
                 }
             })
     }

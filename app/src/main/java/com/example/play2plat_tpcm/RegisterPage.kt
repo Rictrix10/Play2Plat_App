@@ -5,9 +5,12 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -32,6 +35,9 @@ class RegisterPage : AppCompatActivity() {
     private lateinit var ivToggleConfirmPasswordVisibility: ImageView
     private var isPasswordVisible: Boolean = false
     private var isConfirmPasswordVisible: Boolean = false
+    private lateinit var progressLoader: ProgressBar
+    private lateinit var layoutSignUp: FrameLayout
+    private lateinit var tvSignUpText: TextView
 
     private val userViewModel: UserViewModel by viewModels()
 
@@ -59,8 +65,14 @@ class RegisterPage : AppCompatActivity() {
             toggleConfirmPasswordVisibility()
         }
 
-        val btnSignUp: Button = findViewById(R.id.btn_sign_up)
-        btnSignUp.setOnClickListener {
+        layoutSignUp = findViewById(R.id.layout_sign_up)
+        tvSignUpText = findViewById(R.id.tv_sign_up_text)
+        progressLoader = findViewById(R.id.progress_loader)
+
+        layoutSignUp.setOnClickListener {
+            tvSignUpText.visibility = View.GONE
+            progressLoader.visibility = View.VISIBLE
+
             registerUser()
         }
 
@@ -104,6 +116,11 @@ class RegisterPage : AppCompatActivity() {
         return networkCapabilities != null && networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
     }
 
+    private fun resetSignInLayout() {
+        tvSignUpText.visibility = View.VISIBLE
+        progressLoader.visibility = View.GONE
+    }
+
     private fun registerUser() {
         val username = findViewById<EditText>(R.id.et_username).text.toString()
         val email = findViewById<EditText>(R.id.et_email).text.toString()
@@ -112,6 +129,7 @@ class RegisterPage : AppCompatActivity() {
 
         if (password != confirmPassword) {
             Toast.makeText(this, R.string.password_mismatch, Toast.LENGTH_SHORT).show()
+            resetSignInLayout()
             return
         }
 
@@ -122,11 +140,13 @@ class RegisterPage : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
 
+            resetSignInLayout()
             return
         }
 
         if(isNetworkAvailable() == false){
             Toast.makeText(this, R.string.no_connection_register, Toast.LENGTH_SHORT).show()
+            resetSignInLayout()
             return
         }
 
@@ -142,6 +162,7 @@ class RegisterPage : AppCompatActivity() {
                     userViewModel.getUserByEmailAndPassword(email, password).observe(this@RegisterPage, Observer { user ->
                         if (user != null) {
                             Toast.makeText(this@RegisterPage, R.string.user_registered_successfully, Toast.LENGTH_SHORT).show()
+                            resetSignInLayout()
                             val intent = Intent(this@RegisterPage, LoginPage::class.java)
                             startActivity(intent)
                             finish()
@@ -156,11 +177,13 @@ class RegisterPage : AppCompatActivity() {
                         else -> getString(R.string.registration_failed)
                     }
                     Toast.makeText(this@RegisterPage, errorMessage, Toast.LENGTH_SHORT).show()
+                    resetSignInLayout()
                 }
             }
 
             override fun onFailure(call: Call<UserRegisterResponse>, t: Throwable) {
                 Toast.makeText(this@RegisterPage, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                resetSignInLayout()
             }
         })
     }
