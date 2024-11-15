@@ -189,7 +189,7 @@ class LoginPage : AppCompatActivity() {
                         }
 
                         ApiManager.setJwtToken(acessToken)
-                        ApiManager.setRefreshToken(refreshToken)
+                        //ApiManager.setRefreshToken(refreshToken)
 
                         saveUserData(user)
                         if (user.avatar != null) {

@@ -17,7 +17,7 @@ object ApiManager {
     // Adicione a sua chave API
     private const val API_KEY = "a75cfc9e4102e2830343787f2e0f3b939f877b8d7b1f2c1a9fdd07d0d3e0542c5beed6c0e5b80eb7cd8b57ab8cbcb9dbb3b4f8b06ad86ad4fe2b7b302d907d7e"
     private var jwtToken: String? = null
-    private var refreshToken: String? = null
+    //private var refreshToken: String? = null
 
     // Define o interceptor de forma estática
     private val interceptor = Interceptor { chain ->
@@ -27,12 +27,14 @@ object ApiManager {
             .header("x-api-key", API_KEY)  // Adiciona a chave da API
             .build()
 
+        /*
         // Verifique se o JWT expirou e, se sim, faça o refresh
         if (isTokenExpired(jwtToken)) {
             refreshToken?.let {
                 refreshAccessToken(it) // Faz a renovação do token
             }
         }
+         */
 
         // Agora adicione o header de autenticação
         jwtToken?.let {
@@ -69,6 +71,7 @@ object ApiManager {
         jwtToken = token
     }
 
+    /*
     // Função para definir o refresh token
     fun setRefreshToken(token: String) {
         refreshToken = token
@@ -105,4 +108,6 @@ object ApiManager {
             }
         })
     }
+
+     */
 }
