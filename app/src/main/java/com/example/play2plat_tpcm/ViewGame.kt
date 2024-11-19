@@ -48,7 +48,10 @@ class ViewGame : AppCompatActivity() {
                             companyTextView.text = game.company
                             genresTextView.text = game.genres.joinToString(", ")
                             descriptionTextView.text = game.description
-                            Picasso.get().load(game.coverImage).into(gameImageView)
+                            Picasso.get()
+                                .load(game.coverImage)
+                                .into(gameImageView)
+
                         } else {
                             Log.e("ViewGame", "Resposta da API não retornou dados do jogo.")
                         }

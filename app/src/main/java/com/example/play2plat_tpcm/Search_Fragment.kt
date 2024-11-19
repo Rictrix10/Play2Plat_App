@@ -178,7 +178,6 @@ class Search_Fragment : Fragment(), GamesAdapter.OnGamePictureClickListener {
 
     override fun onResume() {
         super.onResume()
-
         if (!parentFragmentManager.isStateSaved) {
             countValue++
             sharedPreferences.edit().putInt("countValue", countValue).apply()
@@ -214,6 +213,7 @@ class Search_Fragment : Fragment(), GamesAdapter.OnGamePictureClickListener {
         } else {
             Log.d("Search_Fragment", "O estado da instância já foi salvo, operações no onResume() adiadas.")
         }
+        //GamesAdapter.notifyDataSetChanged()
     }
 
 

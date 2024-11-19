@@ -275,7 +275,7 @@
     <string name="forget_password_request_submitted">Password recovery request sent successfully.</string>
     <string name="forgot_password">Forgot your password?</string>
     <string name="email_send_failure">Failed to send password recovery email. Please try again later.</string>
-
-
+    <string name="my_profile">My Profile</string>
+    <string name="appearance">Appearance</string>
 
 </resources>

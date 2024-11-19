@@ -13,6 +13,7 @@ import com.example.play2plat_tpcm.R
 import com.example.play2plat_tpcm.api.Game
 import com.example.play2plat_tpcm.databinding.ItemGameHorizontalBinding
 import com.squareup.picasso.Picasso
+import com.bumptech.glide.Glide
 
 import android.util.Log
 import android.widget.ArrayAdapter
@@ -21,6 +22,7 @@ import android.widget.TextView
 
 import com.example.play2plat_tpcm.api.ApiManager
 import com.example.play2plat_tpcm.api.UserGame
+import com.squareup.picasso.MemoryPolicy
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,7 +40,12 @@ class Games_List_Horizontal_Adapter(
 
     inner class GameCoverViewHolder(val binding: ItemGameHorizontalBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(game: Game) {
-            Picasso.get().load(game.coverImage).into(binding.gameCoverImage2)
+            //Picasso.get()
+            Picasso.get()
+                .load(game.coverImage)
+                .placeholder(R.drawable.placeholder)
+                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
+                .into(binding.gameCoverImage2)
             binding.gameCoverImage2.setOnClickListener {
                 game.id?.let { id ->
                     listener.onGameClick(id)

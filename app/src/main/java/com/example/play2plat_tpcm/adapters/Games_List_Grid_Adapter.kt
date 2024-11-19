@@ -16,7 +16,8 @@ class Games_List_Grid_Adapter(
 
     inner class GameCoverViewHolder(private val binding: ItemGameGridBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(game: Game) {
-            Picasso.get().load(game.coverImage).into(binding.gameCoverImage)
+            Picasso.get()
+                .load(game.coverImage).into(binding.gameCoverImage)
             binding.gameCoverImage.setOnClickListener {
                 game.id?.let { id ->
                     listener.onGameClick(id)

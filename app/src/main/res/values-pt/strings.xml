@@ -141,6 +141,7 @@
     <string name="light_mode">Claro</string>
     <string name="dark_mode">Escuro</string>
     <string name="customize">Aparência</string>
+    <string name="system_default_mode">Auto</string>
 
     <string name="app_theme">Tema:</string>
     <string name="app_language">Idioma:</string>
@@ -269,5 +270,7 @@
     <string name="forget_password_request_submitted">Pedido de recuperação de senha enviado com sucesso.</string>
     <string name="forgot_password">Esqueceu-se da palavra-passe?</string>
     <string name="email_send_failure">Falha ao enviar o e-mail de recuperação de senha. Tente novamente mais tarde.</string>
+    <string name="my_profile">Meu Perfil</string>
+    <string name="appearance">Aparência</string>
 
 </resources>
