@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -15,10 +15,10 @@ import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.Company
-import com.example.play2plat.api.Game
-import com.example.play2plat.api.Sequence
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.Company
+import com.ddkric.play2plat.api.Game
+import com.ddkric.play2plat.api.Sequence
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

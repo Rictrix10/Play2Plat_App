@@ -1,12 +1,12 @@
-package com.example.play2plat.adapters
+package com.ddkric.play2plat.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat.R
-import com.example.play2plat.api.Game
-import com.example.play2plat.databinding.ItemGameGridBinding
+import com.ddkric.play2plat.R
+import com.ddkric.play2plat.api.Game
+import com.ddkric.play2plat.databinding.ItemGameGridBinding
 import com.squareup.picasso.Picasso
 
 class Games_List_Grid_Adapter(

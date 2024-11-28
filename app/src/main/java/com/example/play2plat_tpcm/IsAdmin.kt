@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 class IsAdmin(private var adminStatus: Boolean) {
 

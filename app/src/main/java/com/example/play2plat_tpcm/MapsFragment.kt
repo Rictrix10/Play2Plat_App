@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -19,8 +19,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.GameCommentsResponse
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.GameCommentsResponse
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap

@@ -1,4 +1,4 @@
-package com.example.play2plat.ui.theme
+package com.ddkric.play2plat.ui.theme
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.DialogFragment
-import com.example.play2plat.R
+import com.ddkric.play2plat.R
 import com.squareup.picasso.Picasso
 
 class FullScreenImageFragment : DialogFragment() {

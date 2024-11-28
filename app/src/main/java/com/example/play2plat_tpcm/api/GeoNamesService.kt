@@ -1,4 +1,4 @@
-import com.example.play2plat.api.GeoNamesResponse
+import com.ddkric.play2plat.api.GeoNamesResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

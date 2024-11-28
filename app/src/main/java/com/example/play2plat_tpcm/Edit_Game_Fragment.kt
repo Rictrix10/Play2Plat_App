@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
@@ -18,11 +18,11 @@ import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.Company
-import com.example.play2plat.api.Game
-import com.example.play2plat.api.Sequence
-import com.example.play2plat.api.Genre
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.Company
+import com.ddkric.play2plat.api.Game
+import com.ddkric.play2plat.api.Sequence
+import com.ddkric.play2plat.api.Genre
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,12 +30,12 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 import java.io.OutputStream
-import com.example.play2plat.adapters.CompanyAdapter
-import com.example.play2plat.adapters.SequenceAdapter
-import com.example.play2plat.adapters.GenresAdapter
-import com.example.play2plat.adapters.PegyAdapter
-import com.example.play2plat.api.GameGenre
-import com.example.play2plat.api.GameInfo
+import com.ddkric.play2plat.adapters.CompanyAdapter
+import com.ddkric.play2plat.adapters.SequenceAdapter
+import com.ddkric.play2plat.adapters.GenresAdapter
+import com.ddkric.play2plat.adapters.PegyAdapter
+import com.ddkric.play2plat.api.GameGenre
+import com.ddkric.play2plat.api.GameInfo
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.squareup.picasso.Picasso

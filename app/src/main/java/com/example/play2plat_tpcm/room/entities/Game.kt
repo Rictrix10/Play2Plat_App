@@ -1,4 +1,4 @@
-package com.example.play2plat.room.entities
+package com.ddkric.play2plat.room.entities
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

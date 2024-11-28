@@ -1,4 +1,4 @@
-package com.example.play2plat.adapters
+package com.ddkric.play2plat.adapters
 
 import android.content.Context
 import android.content.res.Resources
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.example.play2plat.R
+import com.ddkric.play2plat.R
 
 class Collections_2_Adapter(
     context: Context,

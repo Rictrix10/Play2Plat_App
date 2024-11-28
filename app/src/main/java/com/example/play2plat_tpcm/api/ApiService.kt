@@ -1,6 +1,6 @@
-package com.example.play2plat.api
+package com.ddkric.play2plat.api
 
-import com.example.play2plat.UserRegisterResponse
+import com.ddkric.play2plat.UserRegisterResponse
 import okhttp3.MultipartBody
 import okhttp3.ResponseBody
 import retrofit2.Call

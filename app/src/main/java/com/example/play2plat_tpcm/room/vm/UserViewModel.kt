@@ -1,12 +1,12 @@
-package com.example.play2plat.room.vm
+package com.ddkric.play2plat.room.vm
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.play2plat.room.db.AppDatabase
-import com.example.play2plat.room.entities.User
-import com.example.play2plat.room.repository.UserRepository
+import com.ddkric.play2plat.room.db.AppDatabase
+import com.ddkric.play2plat.room.entities.User
+import com.ddkric.play2plat.room.repository.UserRepository
 import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application) : AndroidViewModel(application) {

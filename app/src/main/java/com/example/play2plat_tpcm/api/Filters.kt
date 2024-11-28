@@ -1,4 +1,4 @@
-package com.example.play2plat.api
+package com.ddkric.play2plat.api
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

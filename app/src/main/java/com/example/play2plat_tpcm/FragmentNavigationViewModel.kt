@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import androidx.lifecycle.ViewModel
 import androidx.fragment.app.Fragment

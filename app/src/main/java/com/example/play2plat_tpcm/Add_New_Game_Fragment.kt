@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
@@ -18,12 +18,12 @@ import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.Company
-import com.example.play2plat.api.Game
-import com.example.play2plat.api.Sequence
-import com.example.play2plat.api.Genre
-import com.example.play2plat.api.Platforms
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.Company
+import com.ddkric.play2plat.api.Game
+import com.ddkric.play2plat.api.Sequence
+import com.ddkric.play2plat.api.Genre
+import com.ddkric.play2plat.api.Platforms
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,13 +31,13 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 import java.io.OutputStream
-import com.example.play2plat.adapters.CompanyAdapter
-import com.example.play2plat.adapters.SequenceAdapter
-import com.example.play2plat.adapters.GenresAdapter
-import com.example.play2plat.adapters.PlatformsAdapter
-import com.example.play2plat.adapters.PegyAdapter
-import com.example.play2plat.api.GameGenre
-import com.example.play2plat.api.GamePlatform
+import com.ddkric.play2plat.adapters.CompanyAdapter
+import com.ddkric.play2plat.adapters.SequenceAdapter
+import com.ddkric.play2plat.adapters.GenresAdapter
+import com.ddkric.play2plat.adapters.PlatformsAdapter
+import com.ddkric.play2plat.adapters.PegyAdapter
+import com.ddkric.play2plat.api.GameGenre
+import com.ddkric.play2plat.api.GamePlatform
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

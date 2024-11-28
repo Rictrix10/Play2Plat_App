@@ -1,4 +1,4 @@
-package com.example.play2plat.adapters
+package com.ddkric.play2plat.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.CheckBox
 import android.widget.TextView
-import com.example.play2plat.R
-import com.example.play2plat.api.Platforms
+import com.ddkric.play2plat.R
+import com.ddkric.play2plat.api.Platforms
 
 class PlatformsAdapter(context: Context, platforms: List<Platforms>, private val platformTitle: TextView) :
     ArrayAdapter<Platforms>(context, 0, platforms) {

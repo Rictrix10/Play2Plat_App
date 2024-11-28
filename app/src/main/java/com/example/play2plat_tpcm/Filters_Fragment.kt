@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.animation.Animator
 import android.animation.ValueAnimator
@@ -20,14 +20,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.play2plat.adapters.CompanyAdapter
-import com.example.play2plat.adapters.GenresAdapter
-import com.example.play2plat.adapters.SequenceAdapter
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.Company
-import com.example.play2plat.api.Filters
-import com.example.play2plat.api.Genre
-import com.example.play2plat.api.Sequence
+import com.ddkric.play2plat.adapters.CompanyAdapter
+import com.ddkric.play2plat.adapters.GenresAdapter
+import com.ddkric.play2plat.adapters.SequenceAdapter
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.Company
+import com.ddkric.play2plat.api.Filters
+import com.ddkric.play2plat.api.Genre
+import com.ddkric.play2plat.api.Sequence
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

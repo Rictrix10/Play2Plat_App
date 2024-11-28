@@ -1,4 +1,4 @@
-package com.example.play2plat.api
+package com.ddkric.play2plat.api
 
 data class Avaliation (
     val userId: Int,

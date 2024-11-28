@@ -1,4 +1,4 @@
-package com.example.play2plat.api
+package com.ddkric.play2plat.api
 
 class Genre (
     val id: Int,

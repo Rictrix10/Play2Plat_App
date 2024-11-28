@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.play2plat"
+    namespace = "com.ddkric.play2plat"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.play2plat"
+        applicationId = "com.ddkric.play2plat"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

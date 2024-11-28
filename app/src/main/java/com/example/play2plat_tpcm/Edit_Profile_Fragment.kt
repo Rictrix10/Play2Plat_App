@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -28,9 +28,9 @@ import androidx.core.graphics.ColorUtils
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.palette.graphics.Palette
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.User
-import com.example.play2plat.room.vm.UserViewModel
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.User
+import com.ddkric.play2plat.room.vm.UserViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -102,7 +102,7 @@ class Edit_Profile_Fragment : Fragment() {
     }
 
     interface UserCallback {
-        fun onUserLoaded(roomUser: com.example.play2plat.room.entities.User)
+        fun onUserLoaded(roomUser: com.ddkric.play2plat.room.entities.User)
     }
 
 
@@ -739,7 +739,7 @@ class Edit_Profile_Fragment : Fragment() {
             // First, fetch the Room User ID based on the userId
             userViewModel.getUserByIdUser(userId).observe(viewLifecycleOwner) { roomUser ->
                 if (roomUser != null) {
-                    val updatedUserRoom = com.example.play2plat.room.entities.User(
+                    val updatedUserRoom = com.ddkric.play2plat.room.entities.User(
                         id = roomUser.id, // Use the correct Room User ID
                         idUser = userId,
                         username = updatedUsername,
@@ -824,14 +824,14 @@ class Edit_Profile_Fragment : Fragment() {
     }
 
 
-    private fun saveUserToRoom(user: com.example.play2plat.room.entities.User) {
+    private fun saveUserToRoom(user: com.ddkric.play2plat.room.entities.User) {
         lifecycleScope.launch {
             userViewModel.updateUser(user)
             Log.d("EditProfile", "ROOM ATUALIZADO")
         }
     }
     /*
-    private fun saveUserToRoom(user: com.example.play2plat.room.entities.User) {
+    private fun saveUserToRoom(user: com.ddkric.play2plat.room.entities.User) {
         userViewModel.updateUser(user)
         Log.d("EditProfile", "ROOM ATUALIZADO")
     }

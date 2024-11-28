@@ -1,4 +1,4 @@
-package com.example.play2plat.api
+package com.ddkric.play2plat.api
 
 data class CompanyFiltered(
     val id: Int,

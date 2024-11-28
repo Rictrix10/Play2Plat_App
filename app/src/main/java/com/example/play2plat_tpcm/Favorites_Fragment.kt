@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.content.Context
 import android.content.res.Configuration
@@ -13,8 +13,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.ListFavoriteGames
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.ListFavoriteGames
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

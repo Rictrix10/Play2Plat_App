@@ -1,4 +1,4 @@
-package com.example.play2plat
+package com.ddkric.play2plat
 
 import android.app.AlertDialog
 import android.content.Context
@@ -21,14 +21,14 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.palette.graphics.Palette
-import com.example.play2plat.api.ApiManager
-import com.example.play2plat.api.GameInfo
-import com.example.play2plat.api.UserGameFavorite
+import com.ddkric.play2plat.api.ApiManager
+import com.ddkric.play2plat.api.GameInfo
+import com.ddkric.play2plat.api.UserGameFavorite
 import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.example.play2plat.adapters.CollectionsAdapter
+import com.ddkric.play2plat.adapters.CollectionsAdapter
 import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -39,7 +39,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import androidx.fragment.app.viewModels
-import com.example.play2plat.api.UserGameStateResponse
+import com.ddkric.play2plat.api.UserGameStateResponse
 import com.google.android.material.tabs.TabLayout
 import kotlin.math.pow
 import kotlin.math.sqrt
