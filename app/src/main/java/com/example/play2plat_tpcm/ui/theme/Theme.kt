@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.ui.theme
+package com.example.play2plat.ui.theme
 
 import android.app.Activity
 import android.os.Build

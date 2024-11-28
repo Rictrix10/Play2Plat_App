@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.Manifest
 import android.app.AlertDialog
@@ -34,13 +34,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.Comment
-import com.example.play2plat_tpcm.api.GameCommentsResponse
-import com.example.play2plat_tpcm.api.GeoNamesResponse
-import com.example.play2plat_tpcm.api.GeoNamesServiceBuilder.service
-import com.example.play2plat_tpcm.api.LocationInfo
-import com.example.play2plat_tpcm.api.PatchComment
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.Comment
+import com.example.play2plat.api.GameCommentsResponse
+import com.example.play2plat.api.GeoNamesResponse
+import com.example.play2plat.api.GeoNamesServiceBuilder.service
+import com.example.play2plat.api.LocationInfo
+import com.example.play2plat.api.PatchComment
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import okhttp3.MediaType.Companion.toMediaTypeOrNull

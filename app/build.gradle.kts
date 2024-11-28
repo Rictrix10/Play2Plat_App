@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.play2plat_tpcm"
+    namespace = "com.example.play2plat"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.play2plat_tpcm"
+        applicationId = "com.example.play2plat"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

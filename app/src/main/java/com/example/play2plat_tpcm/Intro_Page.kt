@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.content.Intent

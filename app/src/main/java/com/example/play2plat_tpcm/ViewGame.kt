@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.GameInfo
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.GameInfo
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -65,7 +65,7 @@
 
         <FrameLayout
             android:id="@+id/platforms_fragment"
-            android:name="com.example.play2plat_tpcm.Platforms_List_Fragment"
+            android:name="com.example.play2plat.Platforms_List_Fragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />

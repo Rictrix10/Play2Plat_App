@@ -1,8 +1,8 @@
-package com.example.play2plat_tpcm.room.repository
+package com.example.play2plat.room.repository
 
 import androidx.lifecycle.LiveData
-import com.example.play2plat_tpcm.room.dao.UserDao
-import com.example.play2plat_tpcm.room.entities.User
+import com.example.play2plat.room.dao.UserDao
+import com.example.play2plat.room.entities.User
 
 class UserRepository(private  val userDao: UserDao) {
     val readAllUsers : LiveData<List<User>> = userDao.readAllUsers()

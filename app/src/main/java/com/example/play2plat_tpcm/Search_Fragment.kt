@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -16,10 +16,10 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.Collections
-import com.example.play2plat_tpcm.api.Paramater
-import com.example.play2plat_tpcm.api.RandomGenresResponse
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.Collections
+import com.example.play2plat.api.Paramater
+import com.example.play2plat.api.RandomGenresResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.api
+package com.example.play2plat.api
 
 import GeoNamesService
 import retrofit2.Retrofit

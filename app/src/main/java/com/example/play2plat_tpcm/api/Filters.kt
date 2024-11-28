@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.api
+package com.example.play2plat.api
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

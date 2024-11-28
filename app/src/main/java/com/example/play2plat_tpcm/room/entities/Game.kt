@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.room.entities
+package com.example.play2plat.room.entities
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

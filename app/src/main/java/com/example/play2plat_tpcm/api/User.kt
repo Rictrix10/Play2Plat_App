@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.api
+package com.example.play2plat.api
 
 data class User(
     val id: Int,

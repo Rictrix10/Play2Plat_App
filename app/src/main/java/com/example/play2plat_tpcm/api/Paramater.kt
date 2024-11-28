@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.api
+package com.example.play2plat.api
 
 class Paramater(
     val name: String

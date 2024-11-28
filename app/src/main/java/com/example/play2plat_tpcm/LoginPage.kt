@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.Manifest
 import android.content.Context
@@ -29,11 +29,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.UserLogin
-import com.example.play2plat_tpcm.api.UserLoginResponse
-import com.example.play2plat_tpcm.room.entities.User
-import com.example.play2plat_tpcm.room.vm.UserViewModel
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.UserLogin
+import com.example.play2plat.api.UserLoginResponse
+import com.example.play2plat.room.entities.User
+import com.example.play2plat.room.vm.UserViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -45,7 +45,7 @@ import java.io.FileOutputStream
 import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URL
-import com.example.play2plat_tpcm.api.User as User1
+import com.example.play2plat.api.User as User1
 
 class LoginPage : AppCompatActivity() {
 

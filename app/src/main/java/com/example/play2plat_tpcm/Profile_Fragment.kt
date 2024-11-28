@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.app.AlertDialog
 import android.content.Context
@@ -32,10 +32,10 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.palette.graphics.Palette
 import com.squareup.picasso.Picasso
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.Password
-import com.example.play2plat_tpcm.api.User
-import com.example.play2plat_tpcm.room.vm.UserViewModel
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.Password
+import com.example.play2plat.api.User
+import com.example.play2plat.room.vm.UserViewModel
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

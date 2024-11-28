@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.content.Intent
@@ -18,10 +18,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.UserRegister
-import com.example.play2plat_tpcm.room.entities.User
-import com.example.play2plat_tpcm.room.vm.UserViewModel
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.UserRegister
+import com.example.play2plat.room.entities.User
+import com.example.play2plat.room.vm.UserViewModel
 import androidx.lifecycle.Observer
 import retrofit2.Call
 import retrofit2.Callback

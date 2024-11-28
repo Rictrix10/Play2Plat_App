@@ -1,9 +1,9 @@
-package com.example.play2plat_tpcm.room.repository
+package com.example.play2plat.room.repository
 
 import androidx.lifecycle.LiveData
-import com.example.play2plat_tpcm.room.dao.GameDao
-import com.example.play2plat_tpcm.room.dao.UserDao
-import com.example.play2plat_tpcm.room.entities.Game
+import com.example.play2plat.room.dao.GameDao
+import com.example.play2plat.room.dao.UserDao
+import com.example.play2plat.room.entities.Game
 
 class GameRepository(private  val gameDao: GameDao) {
     val readAllGames : LiveData<List<Game>> = gameDao.readAllGames()

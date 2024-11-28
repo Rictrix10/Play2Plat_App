@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.room.dao
+package com.example.play2plat.room.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -7,7 +7,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.play2plat_tpcm.room.entities.User
+import com.example.play2plat.room.entities.User
 
 @Dao
 interface UserDao {

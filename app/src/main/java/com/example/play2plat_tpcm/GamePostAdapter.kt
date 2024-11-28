@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,12 +9,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat_tpcm.api.GameCommentsResponse
-import com.example.play2plat_tpcm.ui.theme.FullScreenImageFragment
+import com.example.play2plat.api.GameCommentsResponse
+import com.example.play2plat.ui.theme.FullScreenImageFragment
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import android.util.Log
-import com.example.play2plat_tpcm.api.ApiManager
+import com.example.play2plat.api.ApiManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.ui.theme
+package com.example.play2plat.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

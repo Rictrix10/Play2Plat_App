@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.content.res.Configuration
@@ -19,13 +19,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat_tpcm.adapters.CollectionsAdapter
-import com.example.play2plat_tpcm.adapters.Collections_2_Adapter
-import com.example.play2plat_tpcm.adapters.PegyAdapter
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.Collections
-import com.example.play2plat_tpcm.api.GameCommentsResponse
-import com.example.play2plat_tpcm.api.UserGame
+import com.example.play2plat.adapters.CollectionsAdapter
+import com.example.play2plat.adapters.Collections_2_Adapter
+import com.example.play2plat.adapters.PegyAdapter
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.Collections
+import com.example.play2plat.api.GameCommentsResponse
+import com.example.play2plat.api.UserGame
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

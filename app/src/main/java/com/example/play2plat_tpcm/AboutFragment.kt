@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.os.Bundle
@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.Collections
-import com.example.play2plat_tpcm.api.Game
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.Collections
+import com.example.play2plat.api.Game
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

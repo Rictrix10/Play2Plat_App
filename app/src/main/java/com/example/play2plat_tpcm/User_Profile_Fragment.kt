@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.os.Bundle
 import android.util.Log
@@ -9,8 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.squareup.picasso.Picasso
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.User
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.User
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

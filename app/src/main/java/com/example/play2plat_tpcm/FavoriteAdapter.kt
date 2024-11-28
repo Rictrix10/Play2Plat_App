@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat_tpcm.api.Game
-import com.example.play2plat_tpcm.api.ListFavoriteGames
+import com.example.play2plat.api.Game
+import com.example.play2plat.api.ListFavoriteGames
 
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView

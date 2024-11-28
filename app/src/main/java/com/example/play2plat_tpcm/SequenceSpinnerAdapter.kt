@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.example.play2plat_tpcm.api.Sequence
+import com.example.play2plat.api.Sequence
 
 class SequenceSpinnerAdapter(context: Context, resource: Int, private val sequences: List<Sequence>) :
     ArrayAdapter<Sequence>(context, resource, sequences) {

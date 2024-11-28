@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

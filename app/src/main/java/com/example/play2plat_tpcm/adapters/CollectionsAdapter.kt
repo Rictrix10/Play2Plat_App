@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.adapters
+package com.example.play2plat.adapters
 
 import android.content.Context
 import android.util.Log
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.example.play2plat_tpcm.R
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.UserGame
+import com.example.play2plat.R
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.UserGame
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

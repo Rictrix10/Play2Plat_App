@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -10,9 +10,9 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.GamePlatform
-import com.example.play2plat_tpcm.api.UserPlatform
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.GamePlatform
+import com.example.play2plat.api.UserPlatform
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

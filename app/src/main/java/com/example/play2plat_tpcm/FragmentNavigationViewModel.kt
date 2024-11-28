@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import androidx.lifecycle.ViewModel
 import androidx.fragment.app.Fragment

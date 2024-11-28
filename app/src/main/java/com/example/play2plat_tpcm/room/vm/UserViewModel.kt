@@ -1,12 +1,12 @@
-package com.example.play2plat_tpcm.room.vm
+package com.example.play2plat.room.vm
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.play2plat_tpcm.room.db.AppDatabase
-import com.example.play2plat_tpcm.room.entities.User
-import com.example.play2plat_tpcm.room.repository.UserRepository
+import com.example.play2plat.room.db.AppDatabase
+import com.example.play2plat.room.entities.User
+import com.example.play2plat.room.repository.UserRepository
 import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application) : AndroidViewModel(application) {

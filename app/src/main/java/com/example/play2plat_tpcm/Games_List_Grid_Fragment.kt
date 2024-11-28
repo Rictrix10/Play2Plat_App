@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm
+package com.example.play2plat
 
 import android.content.res.Configuration
 import android.content.Context
@@ -16,14 +16,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat_tpcm.adapters.Games_List_Grid_Adapter
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.Collections
-import com.example.play2plat_tpcm.api.Filters
-import com.example.play2plat_tpcm.api.Game
-import com.example.play2plat_tpcm.api.GameFavorite
-import com.example.play2plat_tpcm.api.GameFiltered
-import com.example.play2plat_tpcm.api.ListFavoriteGames
+import com.example.play2plat.adapters.Games_List_Grid_Adapter
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.Collections
+import com.example.play2plat.api.Filters
+import com.example.play2plat.api.Game
+import com.example.play2plat.api.GameFavorite
+import com.example.play2plat.api.GameFiltered
+import com.example.play2plat.api.ListFavoriteGames
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

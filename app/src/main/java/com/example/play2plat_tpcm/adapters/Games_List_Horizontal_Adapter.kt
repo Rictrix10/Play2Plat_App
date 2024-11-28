@@ -1,4 +1,4 @@
-package com.example.play2plat_tpcm.adapters
+package com.example.play2plat.adapters
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -9,9 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.play2plat_tpcm.R
-import com.example.play2plat_tpcm.api.Game
-import com.example.play2plat_tpcm.databinding.ItemGameHorizontalBinding
+import com.example.play2plat.R
+import com.example.play2plat.api.Game
+import com.example.play2plat.databinding.ItemGameHorizontalBinding
 import com.squareup.picasso.Picasso
 import com.bumptech.glide.Glide
 
@@ -20,8 +20,8 @@ import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.TextView
 
-import com.example.play2plat_tpcm.api.ApiManager
-import com.example.play2plat_tpcm.api.UserGame
+import com.example.play2plat.api.ApiManager
+import com.example.play2plat.api.UserGame
 import com.squareup.picasso.MemoryPolicy
 import retrofit2.Call
 import retrofit2.Callback
