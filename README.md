@@ -67,11 +67,11 @@
 
 ## 🧑‍💻 Team
 
-|       Developer       |      Role     |
+|       Developer       |      Git Profile    |
 |-----------------------|---------------|
-|     **Diogo Reis**    | Frontend Dev  |
-| **Ricardo Gonçalves** | Backend Dev   |
-|   **Tiago Veloso**    | Software Dev  |
+|     **Diogo Reis**    | <a href="https://github.com/DiogoDking77"> https://github.com/DiogoDking77<a>  |
+| **Ricardo Gonçalves** | <a href="https://github.com/Rictrix10">https://github.com/Rictrix10<a>   |
+|   **Tiago Veloso**    | <a href="https://github.com/Tafonso91">https://github.com/Tafonso91<a>  |
 
 ---
 
