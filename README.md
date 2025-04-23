@@ -86,4 +86,13 @@ Wait for Gradle to sync and build
 Run on an emulator or physical device
 ```
 
+---
+
+## 📦 Project Context
+⚠️ **Note**: This repository is a continuation of the original development.
+Due to restrictions imposed by Vercel during development — where only the project owner could push updates without a paid plan — we migrated the project to this new repository to ensure collaborative contributions could continue smoothly.
+Here is the previous repository <a href="https://github.com/Rictrix10/Play2Plat_TPCM">https://github.com/Rictrix10/Play2Plat_TPCM<a>
+
+---
+
 <div align="center"> Made with ❤️ by Diogo , Ricardo, Tiago </div> 
