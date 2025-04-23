@@ -53,6 +53,8 @@
 
 - **Kotlin**
 - **Android Studio**
+- **Prisma**
+- **Node.js**
 
 ---
 
