@@ -55,6 +55,9 @@
 - **Android Studio**
 - **Prisma**
 - **Node.js**
+- **Gradle**
+- **Postgres**
+- **Vercel**
 
 ---
 
