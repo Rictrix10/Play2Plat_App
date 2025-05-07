@@ -14,7 +14,9 @@
   <img src="https://i.imgur.com/9jU3Jup.jpeg" width="250"/>
 </div>
 
-📥 **[Download APK](https://github.com/Rictrix10/Play2Plat_App/releases/download/v1.0.0/Play2Plat.apk)**
+| Apk Download Link      | Version |
+|---------------------|-------------|
+| 📥 **[Download APK](https://github.com/Rictrix10/Play2Plat_App/releases/download/v1.0.0/Play2Plat.apk)** | v1.0.0  |
 
 ## 📸 Preview
 
