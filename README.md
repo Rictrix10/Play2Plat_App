@@ -14,9 +14,20 @@
   <img src="https://i.imgur.com/9jU3Jup.jpeg" width="250"/>
 </div>
 
+---
+
+## 🧪 How to Test
+
+1. Download the APK [here](LINK)
+2. Transfer to your Android device
+3. Enable **"Install from Unknown Sources"**
+4. Install and explore the app!
+
 | Apk Download Link      | Version |
 |---------------------|-------------|
 | 📥 **[Download APK](https://github.com/Rictrix10/Play2Plat_App/releases/download/v1.0.0/Play2Plat.apk)** | v1.0.0  |
+
+---
 
 ## 📸 Preview
 
