@@ -18,7 +18,7 @@
 
 ## 🧪 How to Test
 
-1. Download the APK [here](LINK)
+1. Download the APK [here](https://github.com/Rictrix10/Play2Plat_App/releases/download/v1.0.0/Play2Plat.apk)
 2. Transfer to your Android device
 3. Enable **"Install from Unknown Sources"**
 4. Install and explore the app!
